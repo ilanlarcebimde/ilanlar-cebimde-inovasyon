@@ -18,14 +18,15 @@ const countries = [
 const Countries: React.FC = () => {
   return (
     <section className="relative bg-brand-bg py-20 overflow-hidden">
-      {/* Dünya Haritası Arka Plan */}
-      <div className="absolute inset-0 z-0">
+      {/* Dünya Haritası Arka Plan - Görünürlük Artırıldı */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center">
           <img 
             src="https://images.pexels.com/photos/592753/pexels-photo-592753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
             alt="Dünya Haritası" 
-            className="w-full h-full object-cover opacity-10"
+            className="w-full h-full object-cover opacity-25 mix-blend-multiply"
           />
-          <div className="absolute inset-0 bg-brand-bg/80"></div>
+          {/* Overlay azaltıldı ki harita görünsün */}
+          <div className="absolute inset-0 bg-brand-bg/50"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -35,7 +36,7 @@ const Countries: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-4">
           {countries.map(country => (
             <div key={country.name} className="group relative">
-              <div className="bg-brand-surface/95 backdrop-blur-sm text-brand-text-secondary font-semibold py-3 px-6 rounded-lg shadow-md cursor-pointer ring-1 ring-gray-200 transform group-hover:scale-110 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
+              <div className="bg-brand-surface/90 backdrop-blur-sm text-brand-text-secondary font-semibold py-3 px-6 rounded-lg shadow-md cursor-pointer ring-1 ring-gray-200 transform group-hover:scale-110 group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
                 {country.name}
               </div>
               <div className="absolute bottom-full mb-2 w-max max-w-xs p-3 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none left-1/2 -translate-x-1/2 shadow-xl z-20">
