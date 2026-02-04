@@ -1,21 +1,19 @@
-
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// GÜVENLİK UYARISI:
-// Google Cloud Console'dan aldığınız YENİ API anahtarlarını aşağıya yapıştırın.
-// Bu dosyanın GitHub'da herkese açık (public) paylaşılmamasına dikkat edin.
-// En iyi pratik: Mümkünse .env dosyası kullanın veya Google Cloud Console'dan
-// API anahtarınıza "HTTP Referrer" kısıtlaması getirerek sadece kendi domaininizde çalışmasını sağlayın.
+// GÜVENLİK GÜNCELLEMESİ:
+// Artık API anahtarları doğrudan kodun içinde yazmıyor.
+// Vercel panelinde 'Environment Variables' kısmına eklediğiniz değerleri otomatik çeker.
+// Bu sayede GitHub'da kodunuz görünse bile şifreleriniz görünmez.
 
 const firebaseConfig = {
-  apiKey: "BURAYA_YENI_API_KEY_GELECEK", // Önceki key ifşa olduğu için yenisini üretip yapıştırın
-  authDomain: "ilanlar-cebimde-inovasyon.firebaseapp.com",
-  projectId: "ilanlar-cebimde-inovasyon",
-  storageBucket: "ilanlar-cebimde-inovasyon.firebasestorage.app",
-  messagingSenderId: "668410591994",
-  appId: "1:668410591994:web:c7cb904f8b0ff9341aa743"
+  apiKey: (import.meta as any).env.VITE_FIREBASE_API_KEY,
+  authDomain: (import.meta as any).env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: (import.meta as any).env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: (import.meta as any).env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: (import.meta as any).env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: (import.meta as any).env.VITE_FIREBASE_APP_ID
 };
 
 // Firebase'i başlat
