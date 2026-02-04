@@ -5,12 +5,12 @@ import { getFirestore } from "firebase/firestore";
 
 // ÖNEMLİ: Bu bilgileri Firebase Console -> Project Settings kısmından alıp değiştirmelisiniz.
 const firebaseConfig = {
-  apiKey: "BURAYA_API_KEY_GELECEK",
-  authDomain: "BURAYA_AUTH_DOMAIN_GELECEK",
-  projectId: "BURAYA_PROJECT_ID_GELECEK",
-  storageBucket: "BURAYA_STORAGE_BUCKET_GELECEK",
-  messagingSenderId: "BURAYA_SENDER_ID_GELECEK",
-  appId: "BURAYA_APP_ID_GELECEK"
+  apiKey: "AIzaSyBV9ccYeRwYQKwsTw04ah3Onx6AbUdCQbk",
+  authDomain: "ilanlar-cebimde-inovasyon.firebaseapp.com",
+  projectId: "ilanlar-cebimde-inovasyon",
+  storageBucket: "ilanlar-cebimde-inovasyon.firebasestorage.app",
+  messagingSenderId: "668410591994",
+  appId: "1:668410591994:web:c7cb904f8b0ff9341aa743"
 };
 
 // Firebase'i başlat
