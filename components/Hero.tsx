@@ -34,10 +34,10 @@ const Hero: React.FC = () => {
           </div>
           <div className="relative h-64 sm:h-80 md:h-[28rem] w-full order-2 md:order-2 mt-4 md:mt-0">
             <img 
-              src="https://images.pexels.com/photos/224924/pexels-photo-224924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="İnşaat sahasında çelik konstrüksiyon montajı yapan ustalar"
-              className="w-full h-full object-cover rounded-xl shadow-2xl"
-              aria-label="Geniş bir şantiyede, binanın çelik iskeletini monte eden bir grup inşaat ustası."
+              src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="İnşaat sahasında çalışan vinçler ve yapılar"
+              className="w-full h-full object-cover rounded-xl shadow-2xl grayscale-[20%]"
+              aria-label="Geniş bir inşaat sahası ve yükselen yapılar."
             />
              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl pointer-events-none"></div>
           </div>
