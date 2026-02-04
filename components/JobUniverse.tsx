@@ -68,18 +68,24 @@ const MarqueeText: React.FC = () => (
 
 const JobUniverse: React.FC = () => {
   return (
-    <section className="bg-brand-bg py-20 relative overflow-hidden">
-        <div 
-            className="absolute inset-0 bg-repeat opacity-[3%]" 
-            style={{backgroundImage: "url('https://www.transparenttextures.com/patterns/concrete-wall.png')"}}
-        ></div>
+    <section className="relative bg-brand-bg py-20 overflow-hidden">
+      {/* Beton Duvar Arka Plan */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+          alt="Beton Duvar Dokusu" 
+          className="w-full h-full object-cover opacity-15 mix-blend-multiply"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-bg/90 via-brand-bg/60 to-brand-bg/95"></div>
+      </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-extrabold text-brand-text-primary sm:text-4xl lg:text-5xl">Ustalara Göre Meslek Evreni</h2>
           <p className="mt-4 text-lg text-brand-text-secondary max-w-3xl mx-auto">Bu platform, sizin gibi ustaların uzmanlık alanlarını tanır ve en doğru işleri önceliklendirir.</p>
         </div>
         
-        <div className="relative my-16 py-6 overflow-hidden bg-brand-surface border-y-2 border-brand-blue/20">
+        <div className="relative my-16 py-6 overflow-hidden bg-brand-surface/80 backdrop-blur-sm border-y-2 border-brand-blue/20">
             <div className="absolute inset-0 bg-gradient-to-r from-brand-surface via-transparent to-brand-surface z-10 pointer-events-none"></div>
             <div className="flex animate-marquee-fast">
                 <MarqueeText />
@@ -90,7 +96,7 @@ const JobUniverse: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {jobBlocks.map(block => (
-            <div key={block.title} className="group bg-brand-surface p-8 rounded-xl border border-gray-200/80 transition-all duration-300 ease-in-out hover:shadow-2xl hover:border-brand-blue/50 hover:-translate-y-2">
+            <div key={block.title} className="group bg-brand-surface/90 backdrop-blur-sm p-8 rounded-xl border border-gray-200/80 transition-all duration-300 ease-in-out hover:shadow-2xl hover:border-brand-blue/50 hover:-translate-y-2">
               <h3 className="text-2xl lg:text-3xl font-bold text-brand-text-primary mb-6">{block.title}</h3>
               <div className="flex flex-wrap gap-x-3 gap-y-2 text-md overflow-hidden max-h-[10.5rem] group-hover:max-h-96 group-active:max-h-96 transition-[max-height] duration-700 ease-in-out">
                 {block.tags.map(tag => (

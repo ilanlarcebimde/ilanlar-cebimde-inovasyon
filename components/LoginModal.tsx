@@ -1,8 +1,7 @@
 
 import React, { useState } from 'react';
 import GoogleLogo from './icons/GoogleLogo';
-import { auth, googleProvider } from '../firebase';
-import { signInWithPopup } from 'firebase/auth';
+import { loginWithGoogle } from '../firebase'; // GÜNCELLENDİ
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -17,7 +16,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   const handleGoogleLogin = async () => {
     try {
       setError(null);
-      await signInWithPopup(auth, googleProvider);
+      await loginWithGoogle(); // Güvenli giriş
       // Başarılı girişten sonra modalı kapat
       onClose();
     } catch (err: any) {

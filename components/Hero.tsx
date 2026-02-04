@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Logo from './icons/Logo';
 
 const marqueeTextContent = "Elektrik Tesisatı • Pano Montaj • Zayıf Akım • Kablo Çekimi • Yangın Alarm • Aydınlatma Montaj • Arıza Bakım • Seramik Döşeme • Fayans Ustası • Derz Uygulama • Şap • Mermer Montaj • Parke • Epoksi Zemin • Boya Ustası • İç Cephe • Dış Cephe • Alçı Boya • Macun • İzolasyon • Vernik • Gazaltı Kaynak • Argon Kaynak • Elektrot Kaynak • Metal Doğrama • Çelik Montaj • Taşlama • Sac İşleri • İnşaat Ustası • Kalıpçı • Demirci • Sıvacı • Duvar Ustası • PVC Doğrama • Çatı İşleri • Isı Yalıtım • Üretim Hattı • Montaj Elemanı • Paketleme • Makine Operasyonu • Kalite Kontrol • Bakım Onarım • Teknik Servis • Klima Servisi • Asansör Bakım • Mekanik Bakım • Beyaz Eşya Servisi • Otel Kat Görevlisi • Meydancı • Teknik Personel • Mutfak Personeli • Mağaza Satış • Reyon Görevlisi • Kasiyer • Servis Elemanı • Temizlik Personeli • ";
 const marqueeItems = marqueeTextContent.split('•').map(s => s.trim()).filter(Boolean);
@@ -32,14 +33,13 @@ const Hero: React.FC = () => {
               "Sen ilan aramazsın. Sistem senin için arar."
             </p>
           </div>
-          <div className="relative h-64 sm:h-80 md:h-[28rem] w-full order-2 md:order-2 mt-4 md:mt-0">
-            <img 
-              src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="İnşaat sahasında çalışan vinçler ve yapılar"
-              className="w-full h-full object-cover rounded-xl shadow-2xl grayscale-[20%]"
-              aria-label="Geniş bir inşaat sahası ve yükselen yapılar."
-            />
-             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl pointer-events-none"></div>
+          <div className="relative h-64 sm:h-80 md:h-[28rem] w-full order-2 md:order-2 mt-4 md:mt-0 flex items-center justify-center bg-brand-bg rounded-xl border border-gray-100 overflow-hidden shadow-inner">
+             <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue/5 to-transparent"></div>
+             <div className="absolute -right-20 -top-20 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl"></div>
+             <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl"></div>
+             <div className="transform rotate-12 opacity-10 scale-150">
+               <Logo className="w-48 h-48 md:w-64 md:h-64 text-brand-text-secondary" />
+             </div>
           </div>
         </div>
       </div>
