@@ -1,27 +1,28 @@
-
 import React, { useState, useEffect } from 'react';
 
-// Kullanıcının referans gösterdiği meslek gruplarına uygun gerçekçi görseller
+// GÜNCELLENMİŞ GÖRSELLER:
+// Sadece iş, şantiye, proje ve emek odaklı.
+// Tatil, havuz, turistik veya alakasız stok fotoğraflar YOK.
 const heroImages = [
   {
-    src: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "Elektrik pano montajı yapan usta"
+    src: "https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "İnşaat sahası ve vinçler"
   },
   {
-    src: "https://images.pexels.com/photos/7218525/pexels-photo-7218525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "İç cephe boya uygulaması"
-  },
-  {
-    src: "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "İnşaat demir ve kalıp işleri"
+    src: "https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "Proje planı inceleyen mühendisler"
   },
   {
     src: "https://images.pexels.com/photos/2381463/pexels-photo-2381463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "Kaynak ve metal işleri"
+    alt: "Koruyucu maske ile kaynak yapan usta"
   },
   {
-    src: "https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "Dış cephe ve yapı işleri"
+    src: "https://images.pexels.com/photos/175039/pexels-photo-175039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "İnşaat iskelesinde çalışan usta"
+  },
+  {
+    src: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "Saha çalışması yapan teknik personel"
   }
 ];
 
@@ -81,8 +82,8 @@ const Hero: React.FC = () => {
                     alt={image.alt}
                     className="w-full h-full object-cover"
                  />
-                 {/* Hafif karartma katmanı (yazı okunabilirliği veya atmosfer için) */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                 {/* Hafif karartma katmanı */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                </div>
              ))}
              
